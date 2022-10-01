@@ -1,0 +1,30 @@
+specVersion: 0.0.4
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Contract
+    network: goerli
+    source:
+      abi: Contract
+      address: "0x7a58b40A593f849560Fd7198b2910D6a3B250e6D"
+      startBlock: 7204015
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - subscriptionList
+        - transferList
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: Subscription(bytes32,bytes32,indexed address,indexed address,indexed
+            address,uint256)
+          handler: handleSub
+        - event: Close(bytes32)
+          handler: handleClose
+        - event: Transfer(bytes32,indexed address,indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/contract.ts

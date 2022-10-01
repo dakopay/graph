@@ -1,0 +1,18 @@
+{
+  "goerli": {
+    "Contract": {
+      "address": "0x7a58b40A593f849560Fd7198b2910D6a3B250e6D",
+      "startBlock": 7204015
+    }
+  },
+  "bsc": {
+    "Contract": {
+      "address": "0x7a58b40A593f849560Fd7198b2910D6a3B250e6D"
+    }
+  },
+  "matic": {
+    "Contract": {
+      "address": "0x7a58b40A593f849560Fd7198b2910D6a3B250e6D"
+    }
+  }
+}

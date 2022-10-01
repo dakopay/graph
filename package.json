@@ -1,0 +1,18 @@
+{
+  "name": "repa",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build --network goerli",
+    "deploy:goerli": "graph deploy --network goerli --node https://api.thegraph.com/deploy/ MONEYMAFIA/Repa-goerli",
+    "deploy:bsc": "graph deploy --network bsc --node https://api.thegraph.com/deploy/ MONEYMAFIA/Repa-bsc",
+    "deploy:matic": "graph deploy --network matic --node https://api.thegraph.com/deploy/ MONEYMAFIA/Repa-matic",
+    "create-local": "graph create --node http://localhost:8020/ MONEYMAFIA/Repa-goerli",
+    "remove-local": "graph remove --node http://localhost:8020/ MONEYMAFIA/Repa-goerli",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 MONEYMAFIA/Repa-goerli"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.32.0",
+    "@graphprotocol/graph-ts": "0.27.0"
+  }
+}
